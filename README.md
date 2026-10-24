@@ -1,6 +1,6 @@
 # Juniper House digital menu
 
-A static, mobile-friendly restaurant menu with dish search, category filters, serving sizes, prices, and nutrition values. The **Get the menu QR** dialog creates a downloadable QR image for the public URL where you host this menu.
+A static, mobile-friendly restaurant menu with separate Veg, Non Veg, and Dessert sections, dish search, serving sizes, prices, and nutrition values. The **Get the menu QR** dialog creates a downloadable QR image for the public URL where you host this menu.
 
 ## Run locally
 
@@ -17,5 +17,6 @@ The QR encodes the public address you enter; a local file address or `localhost`
 ## Customize
 
 - Update dishes, prices, serving weights, and nutrition data in the `dishes` array in `app.js`.
+- Assign each dish to `Veg`, `Non Veg`, or `Dessert` in that array to place it in the right menu section.
 - Nutrition figures in the starter menu are illustrative estimates. Replace them with values verified for your recipes and serving sizes before publishing.
 - Set the displayed currency and restaurant branding in `app.js`, `index.html`, and `styles.css`.

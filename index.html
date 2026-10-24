@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="A fresh, nutrition-forward digital menu for Juniper House.">
+  <title>Juniper House — Digital Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Juniper House home"><span class="brand-mark">J</span><span>JUNIPER <b>HOUSE</b></span></a>
+    <nav><a href="#menu">The menu</a><a href="#about">Our kitchen</a></nav>
+    <button class="qr-top" id="openQr">⌗ <span>Get the menu QR</span></button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span></span> GOOD FOOD, GOOD FEELING</p><h1>A little more<br><em>delicious.</em></h1><p class="hero-intro">Seasonal plates, honest ingredients, and all the details you need to choose well.</p><a class="primary-link" href="#menu">Explore the menu <span>↘</span></a></div>
+      <div class="hero-art"><div class="hero-image" role="img" aria-label="Colorful seasonal grain bowl"></div><div class="image-stamp">MADE FRESH<br><b>EVERY DAY</b></div><div class="hero-note">A slower meal<br>is a better meal.</div></div>
+      <div class="hero-meta"><span>EST. 2018</span><span>SEASONAL · LOCAL · ALWAYS FRESH</span><span>MENU 01 / 04</span></div>
+    </section>
+    <section class="menu-section" id="menu">
+      <div class="section-head"><div><p class="eyebrow">FROM OUR KITCHEN</p><h2>Find your <em>favorite.</em></h2></div><p class="section-aside">Thoughtfully made, beautifully simple.<br>Every plate tells you what’s in it.</p></div>
+      <div class="menu-controls"><div class="categories" id="categories"></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a dish" aria-label="Find a dish"></label></div>
+      <div class="nutrition-note"><span class="info-icon">i</span> Nutrition is shown per 1 g and per serving. Values are estimates and may vary by preparation.</div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>No dishes match that search. Try another name.</div>
+    </section>
+    <section class="about" id="about"><div class="about-mark">JH</div><div><p class="eyebrow">A NOTE FROM OUR KITCHEN</p><h2>Good food should<br>feel <em>good, too.</em></h2><p>We cook with the seasons, source with care, and keep our ingredients close to home. Take your time, ask us anything, and make yourself comfortable.</p><span class="signature">See you at the table.</span></div><div class="about-image" role="img" aria-label="Fresh vegetables ready for the kitchen"></div></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">J</span><span>JUNIPER <b>HOUSE</b></span></a><span>GOOD FOOD, SHARED OFTEN.</span><a href="#menu">BACK TO THE MENU ↑</a></footer>
+  <dialog id="qrDialog"><div class="dialog-head"><div><p class="eyebrow">TAKE US WITH YOU</p><h2>Your menu, <em>one scan away.</em></h2></div><button class="close" id="closeQr" aria-label="Close">×</button></div><p class="dialog-copy">Set the live web address for your menu. Print this QR code for your tables and guests can scan it with their phone camera.</p><label class="url-label" for="menuUrl">Live menu URL</label><div class="url-row"><input id="menuUrl" type="url" placeholder="https://yourrestaurant.com/menu" autocomplete="url"><button id="makeQr">Generate</button></div><div class="qr-output"><div id="qrcode"></div><p id="qrHint">Enter the public web address where this menu will be hosted.</p></div><div class="qr-actions"><button id="downloadQr" disabled>Download QR</button><button id="copyUrl" class="secondary">Copy menu link</button></div><p class="qr-footnote">The QR needs a publicly hosted menu URL to work on other phones. This preview runs on your current device until you publish it.</p></dialog>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>
